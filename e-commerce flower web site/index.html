@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flower web site</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+:root {
+    --pink: #e84393;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo {
+    font-size: 3rem;
+    color: black;
+    font-weight: 600;
+}
+
+header .logo span {
+    color: #e84393;
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: rgba(0, 0, 0, 0.806);
+    font-weight: 500;
+}
+
+header .navbar a:hover {
+    color: #e84393;
+    letter-spacing: 2px;
+}
+
+header .icons i {
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+}
+
+header .icons i:hover {
+    color: #e84393;
+}
+
+header #toggle {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 2rem;
+    padding: .4rem .5rem;
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, 0.405);
+    display: none;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(images/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 50rem;
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    color: rgb(66, 49, 49);
+}
+
+.home .content span {
+    font-size: 3.5rem;
+    color: var(--pink);
+    padding: 1rem 0;
+    line-height: 2rem;
+}
+
+.home .content p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    padding: 1rem 0;
+    color: rgb(41, 36, 36);
+}
+
+.btn {
+    font-size: 2rem;
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background-color: #333;
+    color: white;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--pink);
+}
+
+
+.heading {
+    font-size: 4rem;
+    text-align: center;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153, 0.05);
+}
+
+.heading span {
+    color: var(--pink);
+}
+
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.about .row .video-container {
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.about .row .video-container video {
+    width: 100%;
+    border: 1.5rem solid white;
+    border-radius: .5rem;
+    box-shadow: 0 .3rem 1rem rgba(0, 0, 0, 0.246);
+    object-fit: cover;
+}
+
+.about .row .video-container h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.72);
+    background-color: rgba(212, 191, 191, 0.415);
+    width: 100%;
+    padding: .5rem 2rem;
+    font-size: 3rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+    font-size: 1.4rem;
+}
+
+.icons-container {
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem .5rem;
+}
+
+.icons-container .icons {
+    background: #fff;
+    border: .1rem solid rgba(0, 0, 0, 0.204);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+
+.icons-container .icons img {
+    height: 5rem;
+    margin-right: 2rem;
+}
+
+.icons-container .icons h3 {
+    color: #333;
+    font-size: 1.6rem;
+    padding-bottom: .5rem;
+}
+
+.icons-container .icons span {
+    color: #555;
+    padding-bottom: .5rem;
+    font-size: 1.3rem;
+}
+
+.product .box-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product .box-container .box {
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.329);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, 0.129);
+    position: relative;
+    margin: 1rem 1rem;
+}
+
+.product .box-container .box .discoun {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: .7rem 1rem;
+    background: #e8439321;
+    color: var(--pink);
+    font-size: 2rem;
+    z-index: 1;
+    border-radius: .5rem;
+    font-weight: 600;
+}
+
+.product .box-container .box .image {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.product .box-container .box .image img {
+    height: 25rem;
+}
+
+.product .box-container .box:hover .image img {
+    transform: scale(1.1);
+}
+
+.product .box-container .box .image .icons {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -7rem;
+    display: flex;
+    transition: .5s;
+}
+
+.product .box-container .box:hover .image .icons {
+    bottom: 0;
+}
+
+.product .box-container .box .image .icons a {
+    bottom: 0;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 100%;
+    background: var(--pink);
+    color: #fff;
+}
+
+.product .box-container .box .image .icons .cart-btn {
+    border-left: .1rem solid #fff7;
+    border-right: .1rem solid #fff7;
+    width: 100%;
+
+}
+
+.product .box-container .box .image .icons a:hover {
+    background: #333;
+}
+
+.product .box-container .box .content {
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #555;
+}
+
+.product .box-container .box .content .price {
+    color: var(--pink);
+}
+
+.product .box-container .box .content .price span {
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+
+.review .box-conta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.review .box-conta .box {
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.287);
+    border-radius: .5rem;
+    padding: 3rem 3rem;
+    position: relative;
+}
+
+.review .box-conta .box .fa-quote-right {
+    position: absolute;
+    bottom: 1.9rem;
+    right: 2rem;
+    font-size: 6rem;
+    color: rgb(230, 201, 201);
+}
+
+.review .box-conta .box .user {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.review .box-conta .box .stars i {
+    color: var(--pink);
+    font-size: 2rem;
+}
+
+.review .box-conta .box p {
+    color: #999;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+
+.review .box-conta .box .user img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.review .box-conta .box .user .user-info h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.review .box-conta .box .user .user-info span {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.contect .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+
+.contect .row form {
+    flex: 1 1 40rem;
+    padding: 2rem;
+    border: .1rem solid rgba(0, 0, 0, 0.127);
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.415);
+    border-radius: .5rem;
+}
+
+.contect .row .image {
+    flex: 1 1 40rem;
+}
+
+.contect .row .image img {
+    width: 100%;
+}
+
+.contect .row form .box{
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #555;
+    text-transform: none;
+    border: .1rem solid rgba(2, 0, 0, 0.484);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width: 100%;
+
+}
+
+.contect .row form .box:focus{
+    /* border-color: var(--pink); */
+    border: .29rem solid var(--pink);
+}
+
+.contect .row form textarea{
+    resize: none;
+    height: 15rem;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color: #555;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    color: #555;
+    font-size:1.5rem;
+    padding: 1rem 0;
+}
+
+
+.footer .box-container .box a:hover{
+    color: var(--pink);
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
+
+.footer .box-container .box img{
+    margin-top: 1rem;
+}
+
+.footer .credit{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--pink);
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+}
+
+.footer .credit span{
+    color: #333;
+    font-weight: 500;
+}
+
+/* section {
+    padding: 1rem 0;
+} */
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    .section {
+        padding: 2rem;
+    }
+
+    .home {
+        background-position: left;
+    }
+}
+
+
+@media (max-width:768px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: .1rem solid rgba(0, 0, 0, 0.584);
+        background: #eee;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+    }
+
+    #toggle:checked~.navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        display: block;
+        text-align: center;
+    }
+
+    .home .content h3 {
+        font-size: 5rem;
+    }
+
+    .home .content span {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" name="" id="toggle" />
+      <label for="toggle" class="fas fa-bars"></label>
+      <div class="logo"><span>F</span>lower<span> W</span>eb</div>
+
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#product">Product</a>
+        <a href="#review">Review</a>
+        <a href="#contect">Contect</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <i class="fa-solid fa-user"></i>
+      </div>
+    </header>
+
+    <!-- home section start -->
+
+    <section id="home" class="home">
+      <div class="content">
+        <h3>fresh flower</h3>
+        <span>natural & beautiful flowers</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus
+          maiores facere, voluptas ad quas ipsa corrupti sed a iusto quidem vero
+          quos adipisci esse? Ducimus sint omnis natus cupiditate corporis.
+        </p>
+        <a href="#" class="btn">Shop now</a>
+      </div>
+    </section>
+
+    <!-- home section end -->
+
+    <!-- about section start -->
+    <section class="about" id="about">
+      <h3 class="heading"><span>about</span>us</h3>
+      <div class="row">
+        <div class="video-container">
+          <video src="images/about-vid.mp4" loop autoplay muted></video>
+          <h3>best flower seller</h3>
+        </div>
+        <div class="content">
+          <h3>why choose us?</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, non
+            tenetur? Perferendis eligendi dolore deserunt nihil labore enim,
+            quod nobis eum dignissimos officiis. Laborum deleniti, deserunt
+            fugit atque illum incidunt?
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Laudantium, quae delectus natus temporibus ullam, minus numquam iure
+            quo maxime facilis necessitatibus nobis ex molestiae officia
+            deleniti. Unde, obcaecati. Voluptatem, vero.
+          </p>
+          <a href="#" class="btn">learn more</a>
+        </div>
+      </div>
+    </section>
+    <!-- about section end -->
+
+    <!-- icons section start -->
+    <div class="icons-container">
+      <div class="icons">
+        <img src="images/icon-1.png" alt="#" />
+        <div class="info">
+          <h3>free delivery</h3>
+          <span>one all orders</span>
+        </div>
+      </div>
+
+      <div class="icons">
+        <img src="images/icon-2.png" alt="#" />
+        <div class="info">
+          <h3>10 day return</h3>
+          <span>moneyback guarentee</span>
+        </div>
+      </div>
+
+      <div class="icons">
+        <img src="images/icon-3.png" alt="#" />
+        <div class="info">
+          <h3>offers and gifts</h3>
+          <span>one all orders</span>
+        </div>
+      </div>
+
+      <div class="icons">
+        <img src="images/icon-4.png" alt="#" />
+        <div class="info">
+          <h3>secure payment</h3>
+          <span>protected by paytm</span>
+        </div>
+      </div>
+    </div>
+    <!-- icons section end -->
+
+    <!-- product section start -->
+    <section class="product" id="product">
+      <h1 class="heading">letest <span>product</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <span class="discoun">-10%</span>
+          <div class="image">
+            <img src="images/img-1.jpg" alt="" />
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart</a>
+              <a class="fa-solid fa-share-from-square"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$15.00. <span>$20.00</span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <span class="discoun">-13%</span>
+          <div class="image">
+            <img src="images/img-2.jpg" alt="" />
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart</a>
+              <a class="fa-solid fa-share-from-square"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$11.00. <span>$15.00</span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <span class="discoun">-5%</span>
+          <div class="image">
+            <img src="images/img-3.jpg" alt="" />
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart</a>
+              <a class="fa-solid fa-share-from-square"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$11.00. <span>$14.00</span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <span class="discoun">-11%</span>
+          <div class="image">
+            <img src="images/img-4.jpg" alt="" />
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart</a>
+              <a class="fa-solid fa-share-from-square"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$10.00. <span>$13.00</span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <span class="discoun">-14%</span>
+          <div class="image">
+            <img src="images/img-5.jpg" alt="" />
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart</a>
+              <a class="fa-solid fa-share-from-square"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$12.00. <span>$16.00</span></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <span class="discoun">-16%</span>
+          <div class="image">
+            <img src="images/img-6.jpg" alt="" />
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart</a>
+              <a class="fa-solid fa-share-from-square"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$7.00. <span>$11.00</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <span class="discoun">-50%</span>
+          <div class="image">
+            <img src="images/img-7.jpg" alt="" />
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart</a>
+              <a class="fa-solid fa-share-from-square"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$10.00. <span>$15.00</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <span class="discoun">-12%</span>
+          <div class="image">
+            <img src="images/img-8.jpg" alt="" />
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart</a>
+              <a class="fa-solid fa-share-from-square"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$9.00. <span>$14.00</span></div>
+          </div>
+        </div>
+        <div class="box">
+          <span class="discoun">-11%</span>
+          <div class="image">
+            <img src="images/img-9.jpg" alt="" />
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="cart-btn">add to cart</a>
+              <a class="fa-solid fa-share-from-square"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>flower pot</h3>
+            <div class="price">$12.00. <span>$15.00</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- product section end -->
+
+    <!-- review section start -->
+    <section class="review" id="review">
+      <h1 class="heading">customer's <span>review</span></h1>
+      <div class="box-conta">
+        <div class="box">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+            temporibus reprehenderit eum laudantium nesciunt autem placeat illum
+            unde ex? Debitis, officiis cum laudantium unde perspiciatis ipsa!
+            Qui odio architecto nemo!
+          </p>
+          <div class="user">
+            <img src="images/pic-1.png" alt="" />
+            <div class="user-info">
+              <h3>alen tom</h3>
+              <span>happy customer</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-quote-right"></i>
+        </div>
+
+        <div class="box">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+            temporibus reprehenderit eum laudantium nesciunt autem placeat illum
+            unde ex? Debitis, officiis cum laudantium unde perspiciatis ipsa!
+            Qui odio architecto nemo!
+          </p>
+          <div class="user">
+            <img src="images/pic-2.png" alt="" />
+            <div class="user-info">
+              <h3>alen tom</h3>
+              <span>happy customer</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-quote-right"></i>
+        </div>
+
+        <div class="box">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+            temporibus reprehenderit eum laudantium nesciunt autem placeat illum
+            unde ex? Debitis, officiis cum laudantium unde perspiciatis ipsa!
+            Qui odio architecto nemo!
+          </p>
+          <div class="user">
+            <img src="images/pic-3.png" alt="" />
+            <div class="user-info">
+              <h3>alen tom</h3>
+              <span>happy customer</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-quote-right"></i>
+        </div>
+      </div>
+    </section>
+    <!-- review section end -->
+
+    <!-- contect section start -->
+    <section class="contect" id="contect">
+      <h3 class="heading">contect <span>us</span></h3>
+      <div class="row">
+        <form action="">
+          <input type="text" class="box" placeholder="name" />
+          <input type="email" placeholder="email" class="box" />
+          <input type="number" placeholder="number" class="box" />
+          <textarea
+            class="box"
+            cols="30"
+            placeholder="massage"
+            rows="10"
+          ></textarea>
+          <input type="submit" value="send message" class="btn" />
+        </form>
+        <div class="image">
+          <img src="images/contact-img.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- contect section end -->
+
+    <!-- footer section start -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>extra link</h3>
+          <a href="#">my order</a>
+          <a href="#">my account</a>
+          <a href="#">my favorite</a>
+          <a href="#">review</a>
+          <a href="#"></a>
+        </div>
+        <div class="box">
+          <h3>location</h3>
+          <a href="#">india</a>
+          <a href="#">japan</a>
+          <a href="#">usa</a>
+          <a href="#">canada</a>
+          <a href="austrlia"></a>
+        </div>
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#">+91 9109197463</a>
+          <a href="#">example@gamil.com</a>
+          <a href="#">mumbai, india - 344567</a>
+          <img src="images/payment.png" alt="">
+        </div>
+      </div>
+      <div class="credit">created by <span>siddharth</span>|all right reserved|</div>
+    </section>
+    <!-- footer section end -->
+    <script src="script.js"></script>
+    <!-- font awesome cdn link -->
+
+    <script
+      src="https://kit.fontawesome.com/4a3b6efd5c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

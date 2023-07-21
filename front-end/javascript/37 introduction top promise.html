@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introduction to promise</title>
+</head>
+
+<body>
+    <script>
+        let promise = new Promise((resolve, reject) => {
+            console.log("this is a promise function");
+            resolve(12);
+        })
+
+        console.log("this is a hello 1");
+
+        setTimeout(function () {
+            console.log("this is a hello 2");
+        }, 3000);
+
+        console.log("this is a promise three");
+
+
+        console.log(promise);
+    </script>
+</body>
+
+</html>

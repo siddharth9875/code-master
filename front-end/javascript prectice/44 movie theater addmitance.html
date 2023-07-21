@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie theate4r admintece</title>
+</head>
+<body>
+    <script>
+        let check = (age,havesupervisor)=>{
+            if(age>15 || havesupervisor){
+                console.log("welcome to theater");
+            }else{
+                console.log("sorry you can not eligble for watch this movie");
+            }
+        }
+
+        check(1,true);
+        check(16,false);
+        check(1,false);
+    </script>
+</body>
+</html>

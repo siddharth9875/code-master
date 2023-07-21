@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pormise then(),catch()</title>
+</head>
+
+<body>
+    <script>
+
+        const p1 = new Promise(function (resolve, reject) {
+            console.log("promise is pendding");
+            setTimeout(() => {
+                console.log("i am a promise i am fillfulled");
+                resolve(true);
+                // reject(new Error("i am errors"))
+            }, 4000)
+        });
+
+        const p2 = new Promise(function (resolve, reject) {
+            console.log("promise is pendding");
+            setTimeout(() => {
+                console.log("i am a promise i am not fillfulled");
+                // resolve(true);
+                reject(new Error("i am errors"))
+            }, 4000)
+        });
+        p1.then((value) => {
+            console.log(value);
+            console.log("this is then function");       
+        });
+
+        p2.catch((error) => {
+            console.log("some error in a occurred in p2");
+        })
+
+        console.log(p1);
+        console.log(p2);
+    </script>
+</body>
+
+</html>

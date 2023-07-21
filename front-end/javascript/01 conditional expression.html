@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional experresion</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("please enter your age");
+        console.log(typeof a);
+        a = Number.parseInt(a); // type casting.
+
+        if (a > 10) {
+            console.log("your age is a valid age");
+        }
+        else {
+            console.log("your age is not a valid age");
+        }
+
+        let age = prompt("please enter your age");
+
+        if (age < 0) {
+            alert("please enter a valid age");
+        }
+
+        else if (age <= 10) {
+            alert("you cannot think about a drive car");
+        }
+
+        else if (age >= 18 && age >= 10) {
+            alert("you can think about a drive car");
+        }
+
+
+        //ternari operator
+
+        console.log(age > 18 ? "18+" : "not 18+");
+
+        //  switch condition statement.
+
+        let ag = prompt("your age ?")
+        ag = Number.parseInt(ag);
+
+        switch (ag) {
+            case 15:
+                console.log("congraculation");
+
+                break;
+
+            case 20:
+                console.log("your age is 20");
+
+                break;
+
+            case 30:
+                console.log("your age is 30");
+                break;
+
+            default:
+                console.log("please enter a valid age");
+                break;
+        }
+    </script>
+</body>
+
+</html>

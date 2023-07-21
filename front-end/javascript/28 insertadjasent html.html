@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insertadjasent html</title>
+</head>
+
+<body>
+    <div id="first">
+        this is a first div
+    </div>
+    <script>
+        let a = document.getElementById("first");
+        console.log(a);
+        a.insertAdjacentHTML("beforebegin", "<div>beforebegin</div>");
+        a.insertAdjacentHTML("beforeend", "<div>beforeend</div>");
+        a.insertAdjacentHTML("afterbegin", "<div>afterbegin</div>");
+        a.insertAdjacentHTML("afterend", "<div>afterends</div>");
+        a.remove();
+    </script>
+</body>
+
+</html>

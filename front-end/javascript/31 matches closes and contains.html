@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>matches closes and contains</title>
+</head>
+
+<body>
+    <div id="id1" class="box"></div>
+    <spen id="id2" class="box"></spen>
+    <script>
+        let id = document.getElementById("id1");
+        console.log(id);
+        console.log(
+            id.matches(".box"),
+            id.matches(".fox"),
+            id.closest("#id1"),
+            id.contains(id2)
+
+
+        );
+    </script>
+</body>
+
+</html>

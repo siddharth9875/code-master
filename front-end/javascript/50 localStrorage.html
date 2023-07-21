@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage </title>
+</head>
+
+<body>
+    <script>
+        let key = prompt("Enter key you want to set");
+        let value = prompt("enter value you want to set");
+        localStorage.setItem(key, value);
+        console.log(`localstorage key is ${key}  and this value is ${value}`);
+
+        if (key == "sid" || value == "pushti") {
+            console.log("that's amezing");
+        }
+
+        if (key == 0) {
+            localStorage.clear();
+        }
+    </script>
+</body>
+
+</html>

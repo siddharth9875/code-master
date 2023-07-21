@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attaching multiple handlers to a promise</title>
+</head>
+
+<body>
+    <script>
+        let p1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("hy i am resolved");
+                resolve(1);
+            }, 2000);
+        });
+
+
+        p1.then(() => {
+            console.log("cgl this promise is now resolved ");
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    return 4;
+                }, 3000)
+            })
+        }).then((value) => {
+            console.log(value);
+        })
+
+
+        p1.then(() => {
+            console.log("this promise is a rejected");
+        });
+
+        p1.then(() => {
+            console.log("pushti");
+        });
+
+    </script>
+</body>
+
+</html>

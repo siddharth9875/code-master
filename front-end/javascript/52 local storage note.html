@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localstorage note</title>
+</head>
+
+<body>
+    <script>
+
+        let a = prompt("please enter your note");
+        let note = "note";
+
+        localStorage.setItem(note, a);
+        let al = confirm("if you add another note");
+
+        if (al) {
+            let b = prompt("please add your note");
+            localStorage.setItem(note, b);
+            console.log(c);
+        }
+    </script>
+</body>
+
+</html>

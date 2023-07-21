@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>handling browser event</title>
+</head>
+
+<body>
+    <button id="btn">
+        if you click me
+    </button>
+    <script>
+        let button = document.getElementById("btn");
+        console.log(button);
+
+        let click_x = (e) => {
+            console.log("this is click one");
+            console.log(e.type);
+            console.log(e.target,e.clientX,e.clientY);
+        };
+
+        let click_y = (e) => {
+            console.log("this is click two");
+        };
+
+        let a = prompt("please enter number range 1-2");
+        a = Number.parseInt(a);
+        console.log(a);
+        button.addEventListener("click", click_x);
+        button.addEventListener("click", click_y);
+        if (a == 2) {
+            button.removeEventListener('click', click_x)
+        }
+
+    </script>
+</body>
+
+</html>

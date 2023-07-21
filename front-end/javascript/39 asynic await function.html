@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNIC AWAIT FUNCTION</title>
+</head>
+
+<body>
+    <script>
+        async function pushti() {
+            let amreliweather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("25deg");
+                }, 2000)
+            });
+
+            let barodaweather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("22deg");
+                }, 5000)
+            });
+
+            // amreliweather.then(console.log("weather of amareli is :", amreliweather));
+            // barodaweather.then(console.log("weather of baroda is :", barodaweather));
+
+
+            console.log("fetching amreli weather please wait ...");
+
+            let amreliw = await amreliweather;
+            console.log("weather of amareli is :", amreliw)
+
+            console.log("fetching baroda weather please wait ...");
+
+            let barodaw = await barodaweather;
+            console.log("weather of baroda is :", barodaw)
+            return [barodaw, amreliw];
+        }
+        console.log("welcome to weather of a city");
+        
+        pushti().then((value) => {
+            console.log(value);
+        })
+    </script>
+</body>
+
+</html>

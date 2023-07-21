@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    display: flex;
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom, #7b22cf, #5d2ce5, #7a33df, #8f27e5, #7252d4);
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px 80px;
+}
+
+.container .card {
+    position: relative;
+    height: 250px;
+    background: rgba(186, 186, 186, 0.492);
+    display: flex;
+    width: 45%;
+    margin: 20px 0px;
+    margin-left: 0px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.205);
+}
+
+.container .card .imgbox {
+    
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.155);
+    backdrop-filter: blur(20px);
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(142, 142, 142, 0.249);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.09);
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+
+.container .card .imgbox img {
+    width: 130px;
+    height: 130px;
+    /*max-width: 100px;
+   */
+    filter: invert(.5);
+    -webkit-filter: invert();
+   
+}
+
+.container .card .imgbox:hover {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 20%;
+    left: -30%;
+}
+
+.container .card .imgbox:hover .imgbox img {
+    width: 75px;
+    height: 75px;
+}
+.card .content{
+   position: absolute;
+   right: 0;
+
+   display: block;
+   margin: 20px;
+   width: calc(100%-1000px);
+   display: flex;
+   flex-direction: column;
+justify-content: center;
+align-items: center;
+   /* text-align: center; */
+}
+
+.card .content h3{
+
+}

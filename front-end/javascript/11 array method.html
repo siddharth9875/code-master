@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array method in js</title>
+</head>
+
+<body>
+    <script>
+        let ary = [1, 2, 3, 4, 5];
+        console.log(ary.length);
+
+        let b = ary.toString();
+        console.log(b, typeof b);
+
+        let c = ary.join(' and ');
+        console.log(c, typeof c);
+
+        let d = ary.pop();//pop return the popped element
+        console.log(d);
+
+        let e = ary.push(12);//push return the new length of array
+        console.log(e, typeof e);
+
+        let f = ary.shift(); //remove elemen from the start of array
+        console.log(f);
+
+        let g = ary.unshift(34);//add element from the beggining
+        console.log(g);
+
+
+    </script>
+</body>
+
+</html>

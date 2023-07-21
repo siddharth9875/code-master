@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array in js</title>
+</head>
+
+<body>
+    <script>
+        let mark = [20, 30, 40, 50, false, "it's not present"];
+        console.log(mark.length);
+        console.log(mark[0]);
+        console.log(mark[1]);
+        console.log(mark[2]);
+        console.log(mark[3]);
+        console.log(mark[4]);
+        console.log(mark[5]);
+        console.log(mark[6]);//will be undefined because index 6 in undefined,
+        mark[6] = 30;//adding a new value to the array
+        mark[1] = 35 // changing value in array
+        console.log(mark);
+        console.log(typeof mark);
+    </script>
+</body>
+
+</html>

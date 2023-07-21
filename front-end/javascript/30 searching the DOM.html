@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <tit>searching the DOM</title>
+</head>
+<body>
+    <p id="hello" class="first">hello</p>
+    <script>
+        let classselect = document.getElementsByClassName("first");
+        console.log(classselect);
+
+        let idselect = document.getElementById("hello");
+        console.log(idselect);
+
+        let tagselect  =  document.getElementsByTagName("p");
+        console.log(tagselect);
+
+        let queryselector = document.querySelectorAll("p .first");
+        console.log(queryselector);
+    </script>
+</body>
+</html>

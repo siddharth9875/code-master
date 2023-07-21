@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        let mark = {
+            siddharth: 90,
+            pushti: 89
+        }
+
+        for (let i = 0; i < Object.keys(mark).length; i++) {
+            console.log("a mark's of " + Object.keys(mark)[i] + "is" + " " + mark[Object.keys(mark)[i]]);
+        }
+
+        //for in loop
+        for (let key in mark) {
+            console.log(key + " mark is :" + mark[key]);
+        }
+
+        // correct number problem
+        let f;
+        let cn = 5;
+        while (f != cn) {
+            console.log("enter correct number");
+            f = prompt("enter number");
+            f = Number.parseInt(f);
+        }
+
+
+        // mean of number
+        let mean = (a, b, c, d) => {
+            return (a + b + c + d) / 4;
+        }
+    </script>
+</body>
+
+</html>

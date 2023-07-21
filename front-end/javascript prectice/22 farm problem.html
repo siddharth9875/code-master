@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a farm problem</title>
+</head>
+
+<body>
+    <script>
+        const animal_lag = (chicken, cow, pigs) => {
+            let c = 2;
+            let co = 2;
+            let pi = 3;
+            let total = (c * chicken) + (co*cow) + (pi * pigs);
+           console.log(total);
+           return total;
+        }
+
+        animal_lag(2,3,4);
+        animal_lag(1,2,2);
+        animal_lag(1,1,1);
+    </script>
+</body>
+
+</html>

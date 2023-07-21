@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Event</title>
+</head>
+
+<body>
+    <input type="button" onclick="alert(event.type)" value="Event type">
+    <button onclick="console.log('click')" class="btn">on click </button>
+    <input type="text" value="twe click">
+    <p id="log"></p>
+    <script>
+        let a = document.getElementsByClassName("btn");
+
+        const eventtype = (event) => {
+            let log = document.getElementsByName("log");
+            log.innerText = '${event.type}';
+        }
+
+
+        document.addEventListener("click", eventtype(), true);
+
+
+
+    </script>
+</body>
+
+</html>

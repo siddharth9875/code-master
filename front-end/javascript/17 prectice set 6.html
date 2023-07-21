@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prectice set 6</title>
+</head>
+
+<body>
+    <script>
+
+        let color = prompt("please enter color name");
+        document.body.style.background = color;
+
+        let number = prompt("please enter number");
+        number = Number.parseInt(number);
+
+        if (number < 4) {
+            location.href = "https://pushtiwebs.com"
+        }
+
+        let run = true;
+        while (run) {
+
+            let age = prompt("please enter age");
+
+            age = Number.parseInt(age);
+            const candrive = (age) => {
+                return age >= 18 ? true : false;
+            }
+            if (age <= 0) {
+                console.error("please enter valid age");
+            }
+
+            if (candrive(age)) {
+                alert("you can drive")
+            } else {
+                alert("you can not drive");
+            }
+
+            run = confirm("do you want to conform rum again");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #80e5ea4b, #dca0e9);
+
+}
+
+section .color {
+    position: absolute;
+    filter: blur(150px);
+    -webkit-filter: blur(150px);
+}
+
+section .color:nth-child(1) {
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    background-color: rgb(255, 6, 218);
+}
+
+section .color:nth-child(2) {
+    left: 50px;
+    bottom: 350px;
+    width: 600px;
+    height: 600px;
+    left: 100px;
+    background-color: rgba(101, 127, 199, 0.741);
+}
+
+section .color:nth-child(3) {
+    bottom: 10px;
+    width: 500px;
+    height: 500px;
+    right: 10px;
+    background-color: rgba(116, 178, 236, 0.705);
+}
+
+.box {
+    position: relative;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    min-height: 500px;
+    background-color: #f6e9e91e;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0 25px 25px rgba(66, 73, 80, 0.256);
+    border: 1px solid rgba(253, 254, 255, 0.247);
+    border-right: 1px solid rgba(253, 254, 255, 0);
+    border-bottom: 1px solid rgba(253, 254, 255, 0.081);
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+
+.form h2 {
+    position: relative;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    /* border: 1px solid ; */
+}
+
+.form h2:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: aliceblue;
+    height: 4px;
+    width: 85px;
+}
+
+.form .inputbox {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.form .inputbox input {
+    width: 100%;
+    border: none;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.376);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 0 25px 25px rgba(157, 165, 174, 0.256);
+    border: 1px solid rgba(253, 254, 255, 0.247);
+    border-right: 1px solid rgba(253, 254, 255, 0);
+    border-bottom: 1px solid rgba(253, 254, 255, 0.081);
+    letter-spacing: 1px;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.173);
+}
+
+.form .inputbox input::placeholder {
+    color: white;
+    font-size: 15px;
+}
+
+.form .inputbox input[type="submit"] {
+    background-color: white;
+    color: blue;
+    max-width: 100px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.forget {
+    margin-top: 5px;
+    color: white;
+    font-weight: 400;
+
+}
+
+.forget a {
+    color: aliceblue;
+    font-weight: 700;
+}
+
+.box .square {
+    position: absolute;
+    box-shadow: 0 25px 25px rgba(66, 73, 80, 0.256);
+    border: 1px solid rgba(230, 237, 244, 0.017);
+    border-right: 1px solid rgba(190, 191, 192, 0.234);
+    border-bottom: 1px solid rgba(252, 252, 252, 0.081);
+    background: #ede7e70a;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.box .square:nth-child(5) {
+    top: -60px;
+    right: -60px;
+    width: 130px;
+    height: 130px;
+}
+.box .square:nth-child(1) {
+    bottom: 150px;
+    left: -110px;
+    width: 150px;
+    height: 150px;
+}
+
+.box .square:nth-child(2) {
+    top: 200px;
+    right: -80px;
+    width: 100px;
+    height: 100px;
+}
+
+.box .square:nth-child(3) {
+    bottom: -60px;
+    right: -60px;
+    width: 130px;
+    height: 130px;
+}
+
+.box .square:nth-child(4) {
+    left: 0px;
+    bottom: -200px;
+    width: 130px;
+    height: 130px;
+}

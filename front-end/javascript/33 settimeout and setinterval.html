@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>settimeout and time setinterval</title>
+</head>
+
+<body>
+    <script>
+        let a = setTimeout(function () {
+            console.log("hy pushti");
+        }, 4000);
+
+        clearTimeout(a);
+        console.log(a);
+
+
+        let b = setInterval(()=>{console.log("hy pushti whay are you love me?");},1000);
+        console.log(b);
+
+    </script>
+</body>
+
+</html>
