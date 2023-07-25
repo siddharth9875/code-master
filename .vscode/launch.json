@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "threedarray",
+            "request": "launch",
+            "mainClass": "threedarray",
+            "projectName": "code-master_e5173629"
+        },
+        {
+            "type": "java",
+            "name": "abstration",
+            "request": "launch",
+            "mainClass": "abstration",
+            "projectName": "code-master_e5173629"
+        },
+        {
+            "type": "java",
+            "name": "if_else",
+            "request": "launch",
+            "mainClass": "if_else",
+            "projectName": "code-master_e5173629"
+        },
+        {
+            "type": "java",
             "name": "side",
             "request": "launch",
             "mainClass": "side",
