@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css clip-path</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@200;300&family=Nunito&family=Titan+One&display=swap');
+    </style>
+    <style>
+        body {
+            /* font-family: 'Caveat', cursive; */
+            font-family: 'Nunito', sans-serif;
+            /* font-family: 'Titan One', sans-serif; */
+            /* background: rgba(194, 189, 189, 0.651); */
+            margin: 0;
+            height: 100vw;
+            justify-items: center;
+            align-items: center;
+            display: grid;
+
+        }
+
+        .container {
+            border-radius: 10px;
+            background-color: white;
+            color: white;
+            width: 30%;
+
+            .inner {
+                background-color: #00ffbf;
+                border-radius: 10px;
+                padding: 1em;
+                width: 250px;
+                clip-path: circle(30px at 85% 25%);
+                transition: all .8s ease-in-out;
+                cursor: pointer;
+
+                #sp {
+                    position: relative;
+                    top: 10px;
+                    margin-right: 24px;
+                    float: right;
+                    color: white;
+                    font-weight: bolder;
+                    font-size: 1.5rem;
+                    transition: all .8s ease-in-out;
+
+                }
+
+                &:hover #sp {
+                    color: #00000000;
+                }
+
+                .we {
+                    color: white;
+                    margin: 0;
+                }
+
+                .pp {
+                    /* color: white; */
+                    font-size: 1rem;
+                }
+            }
+
+            &:hover .inner {
+
+                clip-path: circle(100%);
+                background-color: #00b6ff;
+
+                /* #sp{
+                    display: none;
+                 } */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner">
+            <span id="sp">i</span>
+            <h1 class="we">
+                hi
+            </h1>
+            <p class="pp">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ad.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

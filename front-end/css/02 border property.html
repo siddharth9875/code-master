@@ -3,31 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>border in css</title>
+    <title>border style</title>
     <style>
-        h1 {
-            border-width: 20px;
-            border-style: outset solid dotted groove;
-            border-color: gold
+        body {
+            background-color: darkgray;
         }
-        p{
-            border-bottom: 3px solid red;
-            border-left:4px solid green;
+
+        .bor {
+
+            width: 300px;
+            height: 300px;
+            background-color: cadetblue;
+            border-width: 5px;
+            border-top-style: dashed;
+            border-bottom-style: groove;
+            border-bottom-width: 15px;
+            border-left-style: solid;
+            border-color: rgb(231, 0, 0);
+        }
+
+        .to {
+            border: 5px solid greenyellow
         }
     </style>
 </head>
 
 <body>
-    <h1>
-        css border property
-    </h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, recusandae!</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum nihil quasi enim aperiam! Autem soluta
-        veritatis, eligendi maxime itaque eum!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse perspiciatis vel laudantium possimus, qui sapiente
-        reiciendis odio vero a iusto beatae nulla! Quasi quod rerum ex sequi eligendi ipsum in!</p>
+    <div class="bor">
+        this is a box
+
+    </div>
+
+    <div class="to">
+        this is a second box
+    </div>
 </body>
 
 </html>

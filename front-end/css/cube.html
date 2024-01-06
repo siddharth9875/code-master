@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d rotate</title>
+    <style>
+        body {
+            display: grid;
+            margin: 0;
+            height: 100vh;
+            background-color: rgb(0, 0, 0);
+            justify-items: center;
+            align-items: center;
+            transform-style: preserve-3d;
+
+        }
+
+        .box {
+
+            transform: rotateX(78deg) rotateY(359deg) rotateZ(109deg);
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            /* background-color: rgb(145, 143, 143); */
+            /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.301); */
+            transform-style: preserve-3d;
+            /* perspective: 800px; */
+            animation: rotate 15s linear infinite;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .a {
+            box-shadow: 10px 10px 10px;
+            border: 1px solid black;
+            transform: rotateX(-90deg);
+            z-index: 1;
+            top: -50px;
+            left: calc(50% - 150px);
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: aqua;
+            box-shadow: 0 0 50px 10px blue inset, 0 0 0 2em aqua inset;
+        }
+
+        .b {
+            border: 1px solid black;
+            transform: rotateY(90deg);
+            top: calc(50% - 150px);
+            right: -50px;
+            z-index: 2;
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: aqua;
+            box-shadow: 0 0 50px 10px blue inset, 0 0 0 2em aqua inset;
+        }
+
+        .c {
+
+            border: 1px solid black;
+            transform: rotateY(-90deg);
+            transform-origin: 0% %;
+            top: calc(50% - 150px);
+            left: -50px;
+            position: absolute;
+            z-index: 3;
+            width: 300px;
+            height: 300px;
+            background: aqua;
+            box-shadow: 0 0 50px 10px blue inset, 0 0 0 2em aqua inset;
+        }
+
+        .d {
+            transform: rotateX(90deg);
+            transform-origin: ;
+            top: calc(100% - 250px);
+            left: calc(50% - 150px);
+
+            position: absolute;
+            z-index: 4;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            background: aqua;
+            box-shadow: 0 0 50px 10px blue inset, 0 0 0 2em aqua inset;
+            border: 1px solid black;
+        }
+
+        .e {
+            border: 1px solid black;
+            transform: rotateX(180deg);
+
+            /* top: calc(100% - 250px); */
+            /* left: 100px; */
+
+            transform: translate3d(100px, 100px, -150px);
+            position: absolute;
+            z-index: 4;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            background: aqua;
+            box-shadow: 0 0 50px 10px blue inset, 0 0 0 2em aqua inset;
+        }
+
+        .f {
+            border: 1px solid black;
+            transform: rotateX(180deg);
+
+            /* top: calc(100% - 250px); */
+            /* left: 100px; */
+
+            transform: translate3d(100px, 100px, 150px);
+            position: absolute;
+            z-index: 4;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            background: aqua;
+            box-shadow: 0 0 50px 10px blue inset, 0 0 0 2em aqua inset;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+        <div class="d"></div>
+        <div class="e"></div>
+        <div class="f"></div>
+
+
+    </div>
+</body>
+
+</html>
