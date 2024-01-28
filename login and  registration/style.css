@@ -128,7 +128,7 @@ body {
     color: white;
     font-size: small;
     padding: 10px 0;
-
+    justify-content: center;
 }
 
 .top span a {
