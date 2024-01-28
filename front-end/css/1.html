@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user-select</title>
+    <style>
+        .box {
+            border: 2px solid red;
+            background-color: blanchedalmond;
+            user-select: none;
+            box-decoration-break: clone;
+            line-height: 50px;
+            quotes: "ggggggggg";
+        }
+        q{
+            quotes: '\00AB' '\00BB' '\2sdfdfsdfsdfsdfsdfsdfsdf01E' '\201C';
+        }
+    </style>
+</head>
+
+<body>
+    <span class="box">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rep <q>hello</q>
+        <q>dfgdsfgsdfdfsdf</q>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto doloremque dolores laudantium delectus molestiae aut earum dicta obcaecati accusantium inventore.
+
+        ellat molestias ab reiciendis autem, laboriosam repudiandae rerum incidunt officiis corporis ea aliquid, nihil
+        recusandae fuga facere velit iusto ipsam nam minima?
+    </>
+</body>
+
+</html>

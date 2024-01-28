@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Nunito&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(mounten-background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(39, 39, 39, 0.40);
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39, 39, 39, 0.418),
+            transparent);
+    /* z-index: 100; */
+}
+
+.nav .logo p {
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.nav-menu ul {
+    display: flex;
+
+}
+
+.nav-menu ul li {
+    list-style: none;
+
+}
+
+.nav-menu ul li .link {
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    padding-bottom: 15px;
+    margin: 0 25px;
+
+}
+
+.link:hover,
+.active {
+    border-bottom: 2px solid white;
+}
+
+.nav-button .btn {
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+
+#regbtn {
+    margin-left: 15px;
+}
+
+.btn.w {
+    background-color: rgba(255, 255, 255, 0.706);
+}
+
+.btn.btn.w:hover {
+    background-color: rgba(255, 255, 255, 0.517);
+}
+
+.nav-menu-btn {
+    display: none;
+}
+
+.form-box {
+    justify-content: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 512px;
+    height: 420px;
+    overflow: hidden;
+    z-index: 2;
+
+}
+
+.register-container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+
+.top span {
+    color: white;
+    font-size: small;
+    padding: 10px 0;
+
+}
+
+.top span a {
+    font-weight: 500;
+    color: white;
+    margin-left: 5px;
+}
