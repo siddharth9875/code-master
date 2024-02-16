@@ -10,7 +10,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(mounten-background.jpg);
+    background: url(mounten-with-bird-and-other-and-star-background.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -22,7 +22,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgba(39, 39, 39, 0.20);
+    background-color: rgba(0, 0, 0, 0.135);
 }
 
 .nav {
@@ -33,7 +33,7 @@ body {
     width: 100%;
     height: 100px;
     line-height: 100px;
-    background: linear-gradient(rgba(39, 39, 39, 0.418),
+    background: linear-gradient(rgba(99, 99, 99, 0.321),
             transparent);
     /* z-index: 100; */
 }
@@ -110,12 +110,15 @@ body {
     align-items: center;
     width: 512px;
     height: 420px;
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: 2;
+    border: 1px solid white;
 
 }
 
-.register-container {
+.login-container {
+    position: absolute;
+    left: 4px;
     width: 500px;
     display: flex;
     flex-direction: column;

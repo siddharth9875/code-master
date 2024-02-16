@@ -26,17 +26,54 @@
                 </ul>
             </div>
             <div class="nav-button">
-                <button class="btn w" id="loginbtn">sign in </button>
-                <button class="btn" id="regbtn">sign up </button>
+                <button class="btn w" onclick="login()" id="loginbtn">sign in </button>
+                <button class="btn" onclick="register()" id="registerbtn">sign up </button>
             </div>
 
             <div class="nav-menu-btn">
-                <i class='bx bx-menu'></i>
+                <i class='bx bx-menu' onclick="menufunction()"></i>
             </div>
         </nav>
 
 
         <!-- form box -->
+    <div class="form-box">
+
+  
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Don't Have an account? <a href="#" onclick="register()">sign up</a></span>
+                <header>login</header>
+            </div>
+            <div class="two-forms">
+        
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="username or Email">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="sign in ">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="login-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">| forgot Password? |</a></label>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- regisration -->
+
         <div class="register-container" id="register">
             <div class="top">
                 <span>Have an account? <a href="#" onclick="login()">Login</a></span>
@@ -78,6 +115,7 @@
 
     </div>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"> </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
