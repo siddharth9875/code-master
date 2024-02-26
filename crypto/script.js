@@ -6,7 +6,7 @@ let response = fetch(url)
 response.then((v) => {
     return v.json();
 }).then((value) => {
-    // console.log(value);
+    // console.log(value);    
     // return value;
     let ins = "";
 
