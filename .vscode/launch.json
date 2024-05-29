@@ -203,6 +203,12 @@
             "name": "http://127.0.0.1:3000/front-end/harry.html",
             "request": "launch",
             "url": "http://127.0.0.1:3000/front-end/harry.html"
+        },
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/project/a1 music player/index.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/project/a1 music player/index.html"
         }
     ]
 }

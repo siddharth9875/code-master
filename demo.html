@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+</head>
+
+<body>
+    <script>
+        let p1 = new Promise((resolve, reject) => {
+            console.log("promise is a panding");
+            setTimeout(() => {
+                resolve(20);
+                console.log("promise is a resolve");
+            }, 3000)
+        })
+
+        p1.then(() => {
+            return new Promise((resolve, rejest) => {
+                setTimeout(() => {
+                    console.log("is a then promise")
+                    resolve(10)
+                },2000)
+            })
+        }).then((value)=>{
+            console.log(value);
+        })
+
+
+        p1.then(() => {
+            console.log("promise is a complate");
+        })
+    </script>
+</body>
+
+</html>
