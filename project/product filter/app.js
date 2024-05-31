@@ -59,7 +59,7 @@ for (let i of products.data) {
 
     let card = document.createElement("div");
     //card should have category
-    card.classList.add("card", "i.category");
+    card.classList.add("card", "i.category", 'hide');
     //image div
 
     let imgContainer = document.createElement("div");
@@ -73,14 +73,64 @@ for (let i of products.data) {
 
     document.getElementById("product").appendChild(card)
 
-    let cont = document.createElement("div");
-    cont.classList.add("container");
-    //product name
+    let container = document.createElement("div");
+    container.classList.add('container');
+
+
+    //product name 
+
     let name = document.createElement("h5");
     name.classList.add("product-name");
     name.innerText = i.productName.toUpperCase();
-    cont.appendChild(name);
-    //price
-    let price = document.createElement()
+    container.appendChild(name);
 
+    //price
+    let price = document.createElement('h6');
+    // price.classList.add(price)
+    price.innerText = "$" + i.price
+    container.appendChild(price);
+    card.appendChild(container);
+    document.getElementById("product").appendChild(card);
+
+
+}
+
+let filterProduct = (value) => {
+    let button = document.querySelectorAll('.button-value');
+    //check value equal to  innerText
+
+    button.forEach((button) => {
+        if (value.toUpperCase() == button.innerText.toUpperCase()) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    })
+
+    let element = document.querySelectorAll()
+}
+
+let elements = document.querySelectorAll('.card');
+
+elements.forEach(() => {
+
+    if (value = "all") {
+        elements.classList.remove("hide");
+    }
+    else {
+        if (elements.classList.contains(value)) {
+
+            elements.classList.remove("hide");
+        } else {
+            elements.classList.add("hide");
+        }
+
+
+    }
+})
+
+
+//initial display all product
+window.onload = () => {
+    filterProduct('all');
 }

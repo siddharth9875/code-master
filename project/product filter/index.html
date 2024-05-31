@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product filter</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="wrapper">
@@ -14,11 +16,11 @@
             <button id="search">Search</button>
         </div>
         <div id="button">
-            <button class="button-value active">all</button>
-            <button class="button-value">Topwear</button>
-            <button class="button-value">Bottomwear</button>
-            <button class="button-value">Jacket</button>
-            <button class="button-value">Watch</button>
+            <button class="button-value active" onclick="filterProduct('all')">all</button>
+            <button class="button-value" onclick="filterProduct('Topwear')">Topwear</button>
+            <button class="button-value" onclick="filterProduct('Bottomwear')">Bottomwear</button>
+            <button class="button-value" onclick="filterProduct('Jacket')">Jacket</button>
+            <button class="button-value" onclick="filterProduct('Watch')">Watch</button>
 
             <div id="product">
 
@@ -28,4 +30,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
