@@ -107,25 +107,25 @@ let filterProduct = (value) => {
         }
     })
 
-    let element = document.querySelectorAll()
+    // let element = document.querySelectorAll()
 }
 
-let elements = document.querySelectorAll('.card');
-
-elements.forEach(() => {
+  let elements = document.querySelectorAll('.card');
+  console.log(elements)
+  elements.forEach((value) => {
 
     if (value = "all") {
-        elements.classList.remove("hide");
+        console.log(elements.classList.remove("hide"))
     }
     else {
-        if (elements.classList.contains(value)) {
+        if (elements.classList.contains("hide")) {
 
             elements.classList.remove("hide");
         } else {
             elements.classList.add("hide");
         }
 
-
+        console.log("ok");
     }
 })
 
